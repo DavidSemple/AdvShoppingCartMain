@@ -11,12 +11,11 @@ def setUp():
     driver.maximize_window()
     driver.implicitly_wait(30)
     driver.get(locators.advantageshopping_url)
-    get_title = driver.title
-    print(get_title)
-    if driver.current_url == locators.advantageshopping_url and driver.title == get_title:
+    print(driver.title)
+    if driver.current_url == locators.advantageshopping_url and driver.title == " Advantage Shopping":
        print(f'We\'re at Advantage Shopping Homepage -- {driver.current_url}')
        print(f'We\'re seeing title message -- "Advantage Shopping"')
-       sleep(5)
+       sleep(1)
 
 def tearDown():
     if driver is not None:
